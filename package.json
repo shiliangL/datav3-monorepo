@@ -6,7 +6,6 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "preview": "turbo preview",
-    "lint": "turbo lint",
     "init": "turbo init",
     "clean": "rimraf **/node_modules",
     "playground": "pnpm -F playground run dev"
