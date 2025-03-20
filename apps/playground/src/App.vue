@@ -13,6 +13,10 @@ import { Card, List } from "@dva3/ui";
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
+
+  <div class="bg-glow-conic">
+    glow-conic
+  </div>
   <Card></Card>
   <List></List>
   <HelloWorld msg="Vite + Vue" />

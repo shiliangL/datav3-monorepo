@@ -1,5 +1,11 @@
 packages:
   - apps/*
   - packages/*
+  - internal/*
+
+catalog:
+  '@types/node': ^22.8.6
+  '@manypkg/get-packages': ^2.2.2
+
 ignoredBuiltDependencies:
   - esbuild
