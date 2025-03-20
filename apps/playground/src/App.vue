@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 import { Card, List } from "@dva3/ui";
-
 </script>
 
 <template>
@@ -14,9 +13,7 @@ import { Card, List } from "@dva3/ui";
     </a>
   </div>
 
-  <div class="bg-glow-conic">
-    glow-conic
-  </div>
+  <div class="bg-glow-conic">glow-conic</div>
   <Card></Card>
   <List></List>
   <HelloWorld msg="Vite + Vue" />
@@ -29,9 +26,11 @@ import { Card, List } from "@dva3/ui";
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }

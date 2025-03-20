@@ -3,16 +3,19 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
-  },
   "dependencies": {
     "vue": "^3.5.13",
     "@dva3/ui": "workspace:*"
   },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --fix",
+    "format": "prettier --write ."
+  },
   "devDependencies": {
+    "@dva3/lint-configs": "workspace:*",
     "@vitejs/plugin-vue": "^5.2.1",
     "@dva3/tailwind-config": "workspace:*",
     "@vue/tsconfig": "^0.7.0",
