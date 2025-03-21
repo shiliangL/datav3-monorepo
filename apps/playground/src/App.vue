@@ -11,11 +11,11 @@ import { Card, List } from "@dva3/ui";
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
+    <Card>
+    </Card>
+    <List>
+    </List>
   </div>
-
-  <div class="bg-glow-conic">glow-conic</div>
-  <Card></Card>
-  <List></List>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
@@ -26,11 +26,9 @@ import { Card, List } from "@dva3/ui";
   will-change: filter;
   transition: filter 300ms;
 }
-
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
