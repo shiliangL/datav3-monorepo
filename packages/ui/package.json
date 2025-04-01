@@ -31,8 +31,9 @@
     }
   },
   "scripts": {
-     "build": "vite build",
-    "dev": "vite build --watch"
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "lint": "eslint ."
   },
   "keywords": [],
   "description": "",
@@ -40,7 +41,12 @@
     "vue": "^3.3.0"
   },
   "devDependencies": {
+    "@dva3/lint-configs": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
     "@vitejs/plugin-vue": "^5.2.3",
+    "eslint": "8.57.0",
+    "eslint-plugin-vue": "^10.0.0",
     "typescript": "^5.8.2",
     "vite": "^6.2.2",
     "vite-plugin-dts": "^4.5.3"

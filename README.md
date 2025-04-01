@@ -331,3 +331,6 @@ export default sharedConfig;
 
 - [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of internal/tailwind-config/postcss.config.js is not specified and it doesn't parse as CommonJS.
 - 在`package.json`中指定模块类型`"type": "module"`解决以上告警
+
+## 统一 代码规范约束
+

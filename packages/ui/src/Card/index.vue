@@ -1,11 +1,9 @@
 <template>
-    <div>
-        我是卡片组件
-    </div>
+  <div>我是卡片组件2025年3月21日</div>
 </template>
 
 <script setup>
-
+const b = "12312";
 </script>
 
 <style lang="scss" scoped></style>

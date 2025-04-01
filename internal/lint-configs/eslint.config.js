@@ -1,13 +1,45 @@
 export default [
   {
-    ignores: ['**/dist/**', '**/node_modules/**', '**/.git/**']
+    ignores: ['**/dist/**', '**/node_modules/**', '**/.git/**', '**/coverage/**', '**/.next/**']
   },
   {
-    files: ['**/*.{js,jsx,ts,tsx,vue}']
+    files: ['**/*.{js,jsx,ts,tsx,vue}'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    rules: {
+      'no-console': 'warn',
+      'no-debugger': 'warn',
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'eqeqeq': ['error', 'always'],
+      'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0 }],
+      'comma-dangle': ['error', 'never'],
+      'quotes': ['error', 'single'],
+      'semi': ['error', 'never']
+    }
   },
   {
     // JavaScript/TypeScript基础规则
-    files: ['**/*.{js,jsx,ts,tsx}']
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    plugins: {
+      import: require('eslint-plugin-import')
+    },
+    rules: {
+      'import/order': ['error', {
+        'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+        'newlines-between': 'always',
+        'alphabetize': { order: 'asc' }
+      }],
+      'import/no-duplicates': 'error'
+    }
   },
   {
     // Vue相关规则
@@ -97,7 +129,33 @@ export default [
     rules: {
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }]
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
+      '@typescript-eslint/no-non-null-assertion': 'warn',
+      '@typescript-eslint/no-empty-interface': 'error',
+      '@typescript-eslint/consistent-type-definitions': ['error', 'interface']
+    }
+  },
+  {
+    // React相关规则
+    files: ['**/*.{jsx,tsx}'],
+    plugins: {
+      'react': require('eslint-plugin-react'),
+      'react-hooks': require('eslint-plugin-react-hooks')
+    },
+    settings: {
+      react: {
+        version: 'detect'
+      }
+    },
+    rules: {
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/self-closing-comp': 'error',
+      'react/jsx-boolean-value': ['error', 'never'],
+      'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn'
     }
   }
 ]

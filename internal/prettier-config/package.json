@@ -1,0 +1,17 @@
+{
+  "name": "@dva3/prettier-config",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "default": "./index.mjs"
+    }
+  },
+  "devDependencies": {
+    "prettier": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:"
+  }
+}
