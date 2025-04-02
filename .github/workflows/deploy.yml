@@ -26,7 +26,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 18
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
@@ -50,8 +50,21 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Build UI package
+        run: pnpm -F @dva3/ui run build
+
       - name: Build playground
         run: pnpm build-playground
+
+      - name: Cache build artifacts
+        uses: actions/cache@v3
+        with:
+          path: |
+            **/dist
+            **/.turbo
+          key: ${{ runner.os }}-build-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-build-
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
