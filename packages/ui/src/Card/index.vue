@@ -1,5 +1,5 @@
 <template>
-  <div>我是卡片组件2025年3月21日</div>
+  <div class="bg-black text-white">我是卡片组件2025年3月21日</div>
 </template>
 
 <script setup>
