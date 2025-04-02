@@ -12,7 +12,7 @@
   },
   "packageManager": "pnpm@10.6.1",
   "devDependencies": {
-    "@types/node": "catalog:",
+    "@types/node": "^22.8.6",
     "@dva3/prettier-config": "workspace:*",
     "@dva3/lint-configs": "workspace:*",
     "conventional-changelog-cli": "^5.0.0",
