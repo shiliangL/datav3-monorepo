@@ -27,10 +27,8 @@ jobs:
         run: pnpm install
 
       # （可选）如果是 Monorepo，切换到子目录
-      - name: Navigate to subproject
-        working-directory: ./apps/playground # 例如 ./packages/docs
-        run: |
-          npm run build  # 执行构建命令（如生成静态文件到 dist/）
+      - name: Build root playground
+        run: npm run build-playground
 
       # 部署到 GitHub Pages
       - name: Deploy to GitHub Pages

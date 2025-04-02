@@ -8,7 +8,8 @@
     "preview": "turbo preview",
     "init": "turbo init",
     "clean": "rimraf **/node_modules",
-    "playground": "pnpm -F playground run dev"
+    "playground": "pnpm -F playground run dev",
+    "build-playground": "pnpm -F playground run build"
   },
   "packageManager": "pnpm@10.6.1",
   "devDependencies": {
